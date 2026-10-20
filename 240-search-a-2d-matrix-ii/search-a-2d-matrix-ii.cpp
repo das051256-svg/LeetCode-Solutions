@@ -6,11 +6,10 @@ public:
         int i= 0;
         int j= n-1;
         while(i<m && j>=0){
-            int x= matrix[i][j];
-            if(x== target){
+            if(matrix[i][j]== target){
                 return true;
             }
-            else if(x> target){
+            else if(matrix[i][j]> target){
                 j--;
             }
             else{
