@@ -1,9 +1,11 @@
 class Solution {
 public:
     int shipWithinDays(vector<int>& weights, int days) {
-        vector <int> v= weights;
-        sort(v.begin(), v.end());
-        int start= v[v.size()-1];
+        int start= 0;
+        for(int i=0; i<weights.size(); i++){
+            if(weights[i]>start)
+            start= weights[i];
+        }
         int end= 0;
         for(int i=0; i<weights.size(); i++){
             end+= weights[i];
@@ -23,7 +25,6 @@ public:
             }
             if(d<=days){
                 ans= mid;
-                cout<< ans<< endl;
                 end= mid-1;
             }
             else
