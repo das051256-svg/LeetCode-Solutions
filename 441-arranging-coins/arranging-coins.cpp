@@ -3,7 +3,6 @@ public:
     int arrangeCoins(int n) {
         int start= 1;
         int end= n;
-        int ans= 0;
         int x= 1;
         while(start<=end){
             int mid= start+ (end-start)/2;
